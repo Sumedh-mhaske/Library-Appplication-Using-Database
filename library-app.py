@@ -39,8 +39,16 @@ def book_history():
 
 def add_new_book():
     pass
+
 def add_new_stud():
-    pass
+    enr = stud_enr()
+    nm = input('Enter Student Name : ')
+    mob = input('Enter Student Mobile Number : ')
+    email = input('Enter Student Email : ')
+
+    q = "insert into all_students value ({0}, '{1}', {2}, '{3}')".format(enr, nm, mob, email)
+    db_op(q)
+    print('New Student Added Succesfully...')
 
 while True:
     input()
