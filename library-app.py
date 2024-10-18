@@ -38,7 +38,14 @@ def book_history():
     pass
 
 def add_new_book():
-    pass
+    bnum = book_num()
+    btitle = input('Enter Book Title : ')
+    bauth = input('Enter Book Author Name : ')
+    bpub = input('Enter Book Publications Name : ')
+
+    q = "insert into all_books value ({0}, '{1}', '{2}', '{3}')".format(bnum, btitle, bauth, bpub)
+    db_op(q)
+    print('New Book Added Succesfullly...')
 
 def add_new_stud():
     enr = stud_enr()
