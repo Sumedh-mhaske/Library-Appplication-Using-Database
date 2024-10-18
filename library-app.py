@@ -17,7 +17,15 @@ book_num = lambda : input('Enter Book Number : ')
 stud_enr = lambda : input('Enter Student Enrollment Number : ')
 
 def issue_book():
-    pass
+    bnum = book_num()
+    senr = stud_enr()
+    idate = get_date()
+    ret_date = 'NA'
+    ret_status = 'NO'
+
+    q = "insert into all_issued value ({0}, {1}, {2}, '{3}', '{4}')"
+    db_op(q)
+    print('Book Issued Succesfully...')
 
 def return_book():
     pass
